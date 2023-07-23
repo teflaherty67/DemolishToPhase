@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command DemolishToPhase</Text>
+    <Description>Some description for DemolishToPhase</Description>
+    <Assembly>DemolishToPhase.dll</Assembly>
+    <FullClassName>DemolishToPhase.Command</FullClassName>
+    <ClientId>466cafd6-d40c-4bed-91d2-9f3539a6e587</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application DemolishToPhase</Name>
+    <Assembly>DemolishToPhase.dll</Assembly>
+    <FullClassName>DemolishToPhase.App</FullClassName>
+    <ClientId>d585898a-faec-4fe6-a43f-28d6f546e3be</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
