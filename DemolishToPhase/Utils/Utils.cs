@@ -70,12 +70,16 @@ namespace DemolishToPhase
                                 // if the index of selectedDemoPhase is less than the index of PHASE_CREATED warn the user
                                 if (indexDemo < indexCreated)
                                 {
-                                    string msgText = "Invalid oder of phases: an object cannot be demolished before it was created";
-                                    string msgTitle = "Error";
-                                    Forms.MessageBoxButton msgButtons = Forms.MessageBoxButton.OK;
+                                    TaskDialog tdIndex = new TaskDialog("Invalid");
+                                    tdIndex.MainIcon = TaskDialogIcon.TaskDialogIconWarning;
+                                    tdIndex.Title = "Phase to Demolish";
+                                    tdIndex.TitleAutoPrefix = false;
+                                    tdIndex.MainContent = "Invalid order of phases: an object cannot be demolished before it was created.";
+                                    tdIndex.CommonButtons = TaskDialogCommonButtons.Close;
 
-                                    Forms.MessageBox.Show(msgText, msgTitle, msgButtons, Forms.MessageBoxImage.Warning);
+                                    TaskDialogResult tdIndexRes = tdIndex.Show();
                                 }
+
                                 // if the index is greater than, or equal to, the index of PHASE_CREATED
                                 else if (indexDemo >= indexCreated)
                                 {
@@ -94,7 +98,14 @@ namespace DemolishToPhase
 
                     else
                     {
-                        TaskDialog.Show("Phase to Demolish", "No elements were selected. Select some elements and try again.");
+                        TaskDialog tdNone = new TaskDialog("Invalid");
+                        tdNone.MainIcon = TaskDialogIcon.TaskDialogIconWarning;
+                        tdNone.Title = "Phase to Demolish";
+                        tdNone.TitleAutoPrefix = false;
+                        tdNone.MainContent = "No elements were selected. Select some elements and try again.";
+                        tdNone.CommonButtons = TaskDialogCommonButtons.Close;
+
+                        TaskDialogResult tdNoneRes = tdNone.Show();
                     }
 
                     t.Commit();
