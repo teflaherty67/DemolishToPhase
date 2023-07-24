@@ -76,7 +76,7 @@ namespace DemolishToPhase
 
                                     Forms.MessageBox.Show(msgText, msgTitle, msgButtons, Forms.MessageBoxImage.Warning);
                                 }
-                                // if the index is greater than the index of PHASE_CREATED
+                                // if the index is greater than, or equal to, the index of PHASE_CREATED
                                 else if (indexDemo >= indexCreated)
                                 {
                                     // set the demoPhaseID = selectedDemoPhase.Id
@@ -133,23 +133,7 @@ namespace DemolishToPhase
 
             return null;
 
-        }
-
-        public static PhaseFilter getPhaseFilterByName(Document curDoc, string phaseFilterName)
-        {
-            // get all phase filters
-            List<Element> phaseFilterList = getAllPhaseFilters(curDoc);
-
-            foreach (PhaseFilter curPhaseFilter in phaseFilterList)
-            {
-                if (curPhaseFilter.Name == phaseFilterName)
-                {
-                    return curPhaseFilter as PhaseFilter;
-                }
-            }
-
-            return null;
-        }
+        }       
 
         internal static int GetPhaseIndex(PhaseArray phaseArray, Phase targetPhase)
         {
