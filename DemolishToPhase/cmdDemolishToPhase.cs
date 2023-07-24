@@ -4,10 +4,12 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
+using DemolishToPhase;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Windows.Controls;
 
 #endregion
 
@@ -24,22 +26,14 @@ namespace DemolishToPhase
             UIApplication uiapp = commandData.Application;
             UIDocument uidoc = uiapp.ActiveUIDocument;
             Application app = uiapp.Application;
-            Document doc = uidoc.Document;
-
-            // put any code needed for the form here
+            Document curDoc = uidoc.Document;
 
             // open form
-            MyForm currentForm = new MyForm()
+            Utils.ShowForm = true;
+            while (Utils.ShowForm == true)
             {
-                Width = 800,
-                Height = 450,
-                WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen,
-                Topmost = true,
-            };
-
-            currentForm.ShowDialog();
-
-            // get form data and do something
+                Utils.Run(uiapp, curDoc);
+            }
 
             return Result.Succeeded;
         }
