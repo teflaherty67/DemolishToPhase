@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>DemolishToPhase</Text>
+    <Description>Some description</Description>
+    <Assembly>DemolishToPhase\DemolishToPhase.dll</Assembly>
+    <FullClassName>DemolishToPhase.cmdDemolishToPhase</FullClassName>
+    <ClientId>bc25afa1-dd6e-41a5-b382-898cb253c26b</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>DemolishToPhase - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>DemolishToPhase\DemolishToPhase.dll</Assembly>
+    <FullClassName>DemolishToPhase.Command2</FullClassName>
+    <ClientId>01da4854-9eab-4a24-a3f5-df76143b9550</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>DemolishToPhase</Name>
+    <Assembly>DemolishToPhase\DemolishToPhase.dll</Assembly>
+    <FullClassName>DemolishToPhase.App</FullClassName>
+    <ClientId>818c694e-2cfe-40ed-86e9-994ae87304cc</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
